@@ -1,0 +1,56 @@
+
+/* File parziale per i mixin. Sarà poi importato dal file principale */
+
+/* MIXINS
+===============================================================================================
+=============================================================================================== */
+@mixin transition($value){
+    transition:             $value;
+    -moz-transition:        $value;
+    -webkit-transition:     $value;
+}
+
+@mixin transform($value){
+    transform:              $value;
+    -moz-transform:         $value;
+    -webkit-transform:      $value;
+}
+
+@mixin transform-origin($value){
+    transform-origin:              $value;
+    -ms-transform-origin:          $value;
+    -moz-transform-origin:         $value;
+    -webkit-transform-origin:      $value;
+}
+
+@mixin borderRadius($value){
+    border-radius:          $value;
+    -moz-border-radius:     $value;
+    -webkit-border-radius:  $value;
+}
+
+@mixin boxShadow($value){
+    box-shadow:             $value;
+    -moz-box-shadow:        $value;
+    -webkit-box-shadow:     $value;
+}
+
+@mixin animation($value){
+    animation:              $value;
+    -webkit-animation:      $value;
+    -moz-animation:         $value;
+}
+
+@mixin selection($background, $value){
+    ::selection{
+        background-color: $background;
+        color: $value;
+    }
+
+    ::-moz-selection {
+        background-color: $background;
+        color: $value;
+    }
+}
+
+

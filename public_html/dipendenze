@@ -1,0 +1,39 @@
+
+// NECESSARIE
+// ============================================================================
+myDatePicker.js ----- dipende da ---> myUtils.js
+
+myTimePicker.js ----- dipende da ---> myUtils.js
+
+
+
+
+
+
+
+// FACOLTATIVE
+// ============================================================================
+myDatePicker.js ----- ha le animazioni con ---> animate.css
+myTimePicker.js ----- ha le animazioni con ---> animate.css
+
+myDatePicker.scss ----- funziona meglio con ---> reset.css
+myTimePicker.scss ----- funziona meglio con ---> reset.css
+
+
+
+
+
+
+
+
+// ABBELLIMENTI
+// ============================================================================
+myDatePicker.scss ----- più figo con font ---> OpenSans
+
+myTimePicker.scss ----- più figo con font ---> OpenSans
+
+
+
+
+
+

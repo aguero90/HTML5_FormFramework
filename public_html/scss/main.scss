@@ -1,0 +1,197 @@
+
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+
+html{
+    font-size: 100%;
+}
+
+
+/* REGOLE DI STILE ( DIPENDENTI DAL PROGETTO )
+===============================================================================================
+=============================================================================================== */
+
+.myForm{
+
+    label{
+        font-weight: bold;
+
+        &.inline{
+            display: inline-block;
+            width: 5rem;
+            text-align: right;
+            margin-right: 0.3rem;
+        }
+
+        &.block{
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+    }
+
+    /* TESTO
+    ==========================================================================*/
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"],
+    input[type="number"],
+    input[type="tel"]{
+
+        padding: 0.3rem 0.4rem;
+        font-size: 1rem;
+        border: 1px solid #c0c0c0; // possibile variabile
+        width: 15rem;
+        @include borderRadius(3px);
+        @include transition(box-shadow .5s ease);
+
+        &:focus{
+            @include boxShadow(0 0 3px #0099cc);
+        }
+
+        &.inline{
+
+        }
+
+        &.block{
+
+        }
+
+    }
+
+
+
+
+    /* FILE
+    ==========================================================================*/
+
+    input[type="file"]{
+        font-size: 1rem;
+        border: 1px solid #c0c0c0; // possibile variabile
+        width: 20rem;
+        @include borderRadius(3px);
+
+        &.myFormInputFile{
+            position: absolute;
+            left: -2000px;
+        }
+    }
+
+    .myFormInputFile{
+        display: inline-block;
+        overflow: hidden;
+        height: 2rem;
+        vertical-align: middle;
+        @include borderRadius(3px);
+        @include transition(box-shadow .5s ease);
+
+        &.block{
+            display: block;
+            width: fit-content;
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width: -ms-fit-content;
+        }
+
+        button{
+            float: left;
+            height: 100%;
+            @include borderRadius(3px 0 0 3px);
+
+            &:active{
+                @include transform(none);
+            }
+        }
+
+        span{
+            float: left;
+            height: 100%;
+            padding: 0.4rem;
+            border: 1px solid #c0c0c0; // possibile variabile
+            box-sizing: border-box;
+            cursor: pointer;
+            @include borderRadius(0 3px 3px 0);
+        }
+    }
+
+
+
+
+    /* RANGE
+    ==========================================================================*/
+
+
+
+
+
+    /* BOTTONI
+    ==========================================================================*/
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button{
+
+        background-color: #555555; // possibile variabile
+        color: #eeeeee; // possibile variabile
+        padding: 0.4rem 0.5rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        @include borderRadius(3px);
+        @include transition(background-color .7s ease);
+
+        &:hover{
+            background-color: #333333;
+        }
+
+        &:active{
+            @include transform(translate(1px, 1px));
+        }
+    }
+
+
+
+
+    /* TEXTAREA
+    ==========================================================================*/
+
+    textarea{
+        resize: vertical;
+        width: 15rem;
+        min-height: 5rem; // 5 colonne
+        max-height: 15rem; // 15 colonne
+        padding: 0.3rem 0.4rem;
+        border: 1px solid #c0c0c0;
+        @include transition(box-shadow .5s ease);
+
+        &:focus{
+            @include boxShadow(0 0 3px #0099cc);
+        }
+
+    }
+
+    /* BOTTONE CON IMMAGINE
+    ==========================================================================*/
+    /*
+    Per ora non voglio farne lo styling poichè richiede appunto un'immagine
+    ed è quella il suo style
+
+    input[type="submit"]{
+
+    }
+    */
+
+}
+
+

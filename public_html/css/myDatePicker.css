@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* File parziale per le variabili. Sar├á poi importato dal file principale */
+/* VARIABILI
+===============================================================================================
+=============================================================================================== */
+/* colori palette VECCHIO PROGETTO */
+/* rgba(235, 127, 0, 1) */
+/* rgba(22, 149, 163, 1) */
+/* rgba(34, 83, 120, 1) */
+/* File parziale per i mixin. Sar├á poi importato dal file principale */
+/* MIXINS
+===============================================================================================
+=============================================================================================== */
+/* File parziale per il caricamento dei font. Sar├á poi importato dal file principale */
+/* FONT
+===============================================================================================
+=============================================================================================== */
+@font-face {
+  font-family: 'YOUR_NAME';
+  src: url(PATH) format("truetype"); }
+@font-face {
+  font-family: 'YOUR_NAME';
+  src: url(PATH) format("truetype"); }
+#myDatePicker {
+  position: absolute;
+  left: 1.3rem;
+  padding: 1.3rem;
+  margin-top: 0.4rem;
+  background-color: #FFFFFF;
+  z-index: 10;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  box-shadow: 0 0 3px #1695A3;
+  -moz-box-shadow: 0 0 3px #1695A3;
+  -webkit-box-shadow: 0 0 3px #1695A3; }
+  #myDatePicker table {
+    color: #444444; }
+    #myDatePicker table thead {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #225378; }
+      #myDatePicker table thead #previousMonth, #myDatePicker table thead #nextMonth {
+        color: #1695A3;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        -moz-transition: color 0.3s ease;
+        -webkit-transition: color 0.3s ease; }
+        #myDatePicker table thead #previousMonth:hover, #myDatePicker table thead #nextMonth:hover {
+          color: #EB7F00; }
+        #myDatePicker table thead #previousMonth span, #myDatePicker table thead #nextMonth span {
+          display: inline-block;
+          height: 100%;
+          font-size: 1.4rem; }
+      #myDatePicker table thead #previousMonth {
+        text-align: left; }
+      #myDatePicker table thead #nextMonth {
+        text-align: right; }
+      #myDatePicker table thead #monthAndYear #month {
+        padding: 0 0.3rem; }
+      #myDatePicker table thead #monthAndYear #year {
+        padding: 0 0.3rem; }
+      #myDatePicker table thead .dayOfWeek {
+        padding: 1rem 0 0.4rem;
+        font-size: 1rem; }
+    #myDatePicker table tbody {
+      text-align: center; }
+      #myDatePicker table tbody .day {
+        padding: 0.3rem 0.6rem;
+        font-size: 1rem;
+        cursor: pointer; }
+        #myDatePicker table tbody .day.oldMonthDay, #myDatePicker table tbody .day.newMonthDay {
+          color: #999999; }
+        #myDatePicker table tbody .day.activeDate {
+          background-color: #EB7F00;
+          color: #FFFFFF;
+          border-radius: 3px;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px; }
+
+/*# sourceMappingURL=myDatePicker.css.map */

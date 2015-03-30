@@ -1,0 +1,119 @@
+
+/* File parziale per le animazioni. Sarà poi importato dal file principale */
+
+@import "_mixins.scss";
+
+/* ANIMAZIONI
+============================================================================= */
+.animate{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+
+    &.infinite{
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    &.longer {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
+}
+
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} /* FINE fadeIn */
+
+animate.fadeIn{
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+} /* FINE fadeIn */
+
+animate.fadeOut{
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+@keyframes jump{
+    0%, 100%{
+        @include transform(translate3d(0, 0, 0));
+    }
+    50%{
+        @include transform(translate3d(0, -2rem, 0));
+    }
+}
+
+
+@-webkit-keyframes jump{
+    0%, 100%{
+        @include transform(translate3d(0, 0, 0));
+    }
+    50%{
+        @include transform(translate3d(0, -2rem, 0));
+    }
+} /* FINE jump */
+
+animate.jump{
+    animation-name: jump;
+    -webkit-animation-name: jump;
+    @include transform-origin(center center);
+}
+
+
+
+@keyframes slideRight{
+    0%{
+        left: -30px;
+    }
+    100%{
+        left: 20px;
+    }
+}
+
+@-webkit-keyframes slideFromLeft{
+    0%{
+        @include transform(transform3d(-2000px, 0, 0));
+    }
+    100%{
+        @include transform(transform3d(0, 0, 0));
+    }
+} /* FINE slideFromLeft */
+
+animate.slideFromLeft{
+    animation-name: jump;
+    -webkit-animation-name: jump;
+    @include transform-origin(center center);
+}

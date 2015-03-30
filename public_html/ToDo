@@ -1,0 +1,52 @@
+
+// TODO
+// ============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+// PROBLEMI
+// ============================================================================
+
+Al click sul timePicker, questo scompare poichè il click avviene sul <div>
+delle ore o dei minuti. Questa cosa in teoria dovrebbe succedere anche al datePicker
+
+
+
+
+
+
+
+
+
+// PROBLEMI RISOLTI
+// ============================================================================
+
+P: Attualmente funziona solo o il datePicker o il TimePicker poichè in ogni file
+   ho definito la funzione windows.onload. Quindi la seconda sovrascrive la prima
+
+S: anzichè usare window.onload = callback ho usato
+   window.addEventListener("load", callback). In questo modo non c'è più un solo
+   handler che gestisce questo evento, rischiando di essere sovrascritto.
+   Ma ce ne sono 2 indipendenti l'uno dall'altro.
+
+
+
+
+
+// COSE DA ABBANDONARE
+// ============================================================================
+
+Il DateTimePicker
+
+
+
+

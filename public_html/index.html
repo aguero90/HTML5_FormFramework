@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/myTimePicker.css"/>
+        <link rel="stylesheet" type="text/css" href="css/myDatePicker.css"/>
+        <link rel="stylesheet" type="text/css" href="css/myDateTimePicker.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <body>
+        <div>
+            <form class="myForm">
+                <div>
+                    <label for="inputText" class="inline">Text: &laquo;</label>
+                    <input type="text" placeholder="text" id="inputText" class="myDatePickerInput" data-animate="fadeInLeft"/>
+                </div>
+                <hr />
+                <label for="inputPassword" class="inline">Password: </label>
+                <input type="password" placeholder="password" id="inputPassword"/>
+                <hr />
+                <label for="inputEmail" class="inline">Email: </label>
+                <input type="email" placeholder="email@email.com" id="inputEmail"/>
+                <hr />
+                <label for="inputURL" class="block">URL: </label>
+                <input type="url" placeholder="http://www.google.it" id="inputURL"/>
+                <hr />
+                <label for="inputSearch" class="block">Search: </label>
+                <input type="search" placeholder="search" id="inputSearch"/>
+                <hr />
+                <div>
+                    <label for="inputDate" class="block" >Date: </label>
+                    <input type="date" id="inputDate" class="myDatePickerInput" data-animate="flipInY"/>
+                </div>
+                <hr />
+                <div>
+                    <label for="inputTime" class="block">Time: </label>
+                    <input type="time" id="inputTime" class="myTimePickerInput" data-animate="fadeInLeft"/>
+                </div>
+                <hr />
+                <label for="inputDateTime">DateTime: </label>
+                <input type="datetime" id="inputDateTime" />
+                <hr />
+                <label for="inputDateTimeLocal">DateTimeLocal: </label>
+                <input type="datetime-local" id="inputDateTimeLocal"/>
+                <hr />
+                <label for="inputWeek">Week: </label>
+                <input type="week" id="inputWeek"/>
+                <hr />
+                <label for="inputFile">File: </label>
+                <input type="file" id="inputFile"/>
+                <hr />
+                <label for="inputImage">Image: </label>
+                <input type="image" id="inputImage" src="" alt="tasto con immagine" />
+                <hr />
+                <label for="inputMonth">Month: </label>
+                <input type="month" id="inputMonth" />
+                <hr />
+                <label for="inputNumber">Number: </label>
+                <input type="number" id="inputNumber" />
+                <hr />
+                <label for="inputRange">Range: </label>
+                <input type="range" id="inputRange"/>
+                <hr />
+                <div>
+                    <label for="inputTel">Tel: </label>
+                    <input type="tel" id="inputTel" class="myTimePickerInput" data-animate="flipInY"/>
+                </div>
+                <hr />
+                <input type="submit" value="submit" />
+                <input type="reset" value="reset" />
+                <input type="button" value="button" />
+                <hr />
+                <button type="submit">SUBMIT</button>
+                <button type="reset">RESET</button>
+                <button type="button">BUTTON</button>
+                <hr />
+
+                <textarea placeholder="textarea"></textarea>
+            </form>
+        </div>
+
+
+        <script type="text/javascript" src="js/myUtils.js"></script>
+        <script type="text/javascript" src="js/myDatePicker.js"></script>
+        <script type="text/javascript" src="js/myTimePicker.js"></script>
+        <script type="text/javascript" src="js/myDateTimePicker.js"></script>
+        <script type="text/javascript" src="js/myForm.js"></script>
+    </body>
+</html>

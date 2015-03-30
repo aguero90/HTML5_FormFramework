@@ -1,0 +1,41 @@
+
+// FUNZIONAMENTO DI BASE
+// =============================================================================
+
+DA IMPORTARE:
+    <link rel="stylesheet" type="text/css" href="css/myTimePicker.css"/>
+    <script type="text/javascript" src="js/myTimePicker.js"></script>
+
+
+HTML:
+    <div>
+        <!-- qualsiasi cosa si vuole -->
+
+        <input type="text" class="myTimePickerInput" />
+
+        <!-- qualsiasi altra cosa si vuole -->
+    <div>
+
+// FUNZIONAMENTO CON Animate.css
+// ============================================================================
+
+DA IMPORTARE:
+    <link rel="stylesheet" type="text/css" href="css/myTimePicker.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <script type="text/javascript" src="js/myTimePicker.js"></script>
+
+HTML:
+    <div>
+        <!-- qualsiasi cosa si vuole -->
+
+        <input type="text" class="myTimePickerInput" data-animate="ANIMAZIONE_CHE_VOGLIO"/>
+
+        <!-- qualsiasi altra cosa si vuole -->
+    <div>
+
+
+
+
+
+
+

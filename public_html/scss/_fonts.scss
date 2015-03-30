@@ -1,0 +1,18 @@
+
+/* File parziale per il caricamento dei font. Sarà poi importato dal file principale */
+
+/* FONT
+===============================================================================================
+=============================================================================================== */
+
+@font-face{
+    font-family: 'YOUR_NAME';
+    src: url(PATH) format('truetype');
+}
+
+// ... tutti i font-face che vuoi ...
+
+@font-face{
+    font-family: 'YOUR_NAME';
+    src: url(PATH) format('truetype');
+}

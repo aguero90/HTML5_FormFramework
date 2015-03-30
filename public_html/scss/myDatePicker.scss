@@ -1,0 +1,89 @@
+
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+#myDatePicker{
+    position: absolute;
+    left: 1.3rem;
+    padding: 1.3rem;
+    margin-top: 0.4rem;
+    background-color: $pureWhite;
+    z-index: 10;
+    @include borderRadius(7px);
+    @include boxShadow(0 0 3px $turquoise);
+
+    table{
+        color: $primaryTextColor;
+
+        thead{
+            text-align: center;
+            font-size: 1.2rem;
+            color: $blue;
+
+            #previousMonth, #nextMonth{
+                color: $turquoise;
+                cursor: pointer;
+                @include transition(color .3s ease);
+
+                &:hover{
+                    color: $orange;
+                }
+
+                span{
+                    display: inline-block;
+                    height: 100%;
+                    font-size: 1.4rem;
+                }
+            }
+
+            #previousMonth{
+                text-align: left;
+            }
+
+            #nextMonth{
+                text-align: right;
+            }
+
+            #monthAndYear{
+
+                #month{
+                    padding: 0 0.3rem;
+                }
+
+                #year{
+                    padding: 0 0.3rem;
+                }
+            }
+
+            .dayOfWeek{
+                padding: 1rem 0 0.4rem;
+                font-size: 1rem;
+            }
+
+        }
+
+        tbody{
+            text-align: center;
+
+            .day{
+                padding: 0.3rem 0.6rem;
+                font-size: 1rem;
+                cursor: pointer;
+
+
+                &.oldMonthDay, &.newMonthDay{
+                    color: $secondaryTextColor;
+                }
+
+                &.activeDate{
+                    background-color: $orange;
+                    color: $pureWhite;
+                    @include borderRadius(3px);
+                }
+            }
+        }
+    }
+}
+
+

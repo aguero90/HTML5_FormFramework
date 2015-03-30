@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/* File parziale per le variabili. Sar├á poi importato dal file principale */
+/* VARIABILI
+===============================================================================================
+=============================================================================================== */
+/* colori palette VECCHIO PROGETTO */
+/* rgba(235, 127, 0, 1) */
+/* rgba(22, 149, 163, 1) */
+/* rgba(34, 83, 120, 1) */
+/* File parziale per i mixin. Sar├á poi importato dal file principale */
+/* MIXINS
+===============================================================================================
+=============================================================================================== */
+/* File parziale per il caricamento dei font. Sar├á poi importato dal file principale */
+/* FONT
+===============================================================================================
+=============================================================================================== */
+@font-face {
+  font-family: 'YOUR_NAME';
+  src: url(PATH) format("truetype"); }
+@font-face {
+  font-family: 'YOUR_NAME';
+  src: url(PATH) format("truetype"); }
+html {
+  font-size: 100%; }
+
+/* REGOLE DI STILE ( DIPENDENTI DAL PROGETTO )
+===============================================================================================
+=============================================================================================== */
+.myForm {
+  /* TESTO
+  ==========================================================================*/
+  /* FILE
+  ==========================================================================*/
+  /* RANGE
+  ==========================================================================*/
+  /* BOTTONI
+  ==========================================================================*/
+  /* TEXTAREA
+  ==========================================================================*/
+  /* BOTTONE CON IMMAGINE
+  ==========================================================================*/
+    /*
+    Per ora non voglio farne lo styling poich├¿ richiede appunto un'immagine
+    ed ├¿ quella il suo style
+
+    input[type="submit"]{
+
+    }
+    */ }
+  .myForm label {
+    font-weight: bold; }
+    .myForm label.inline {
+      display: inline-block;
+      width: 5rem;
+      text-align: right;
+      margin-right: 0.3rem; }
+    .myForm label.block {
+      display: block;
+      margin-bottom: 0.3rem; }
+  .myForm input[type="text"],
+  .myForm input[type="password"],
+  .myForm input[type="email"],
+  .myForm input[type="url"],
+  .myForm input[type="search"],
+  .myForm input[type="date"],
+  .myForm input[type="time"],
+  .myForm input[type="datetime"],
+  .myForm input[type="datetime-local"],
+  .myForm input[type="week"],
+  .myForm input[type="month"],
+  .myForm input[type="number"],
+  .myForm input[type="tel"] {
+    padding: 0.3rem 0.4rem;
+    font-size: 1rem;
+    border: 1px solid #c0c0c0;
+    width: 15rem;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    transition: box-shadow 0.5s ease;
+    -moz-transition: box-shadow 0.5s ease;
+    -webkit-transition: box-shadow 0.5s ease; }
+    .myForm input[type="text"]:focus,
+    .myForm input[type="password"]:focus,
+    .myForm input[type="email"]:focus,
+    .myForm input[type="url"]:focus,
+    .myForm input[type="search"]:focus,
+    .myForm input[type="date"]:focus,
+    .myForm input[type="time"]:focus,
+    .myForm input[type="datetime"]:focus,
+    .myForm input[type="datetime-local"]:focus,
+    .myForm input[type="week"]:focus,
+    .myForm input[type="month"]:focus,
+    .myForm input[type="number"]:focus,
+    .myForm input[type="tel"]:focus {
+      box-shadow: 0 0 3px #0099cc;
+      -moz-box-shadow: 0 0 3px #0099cc;
+      -webkit-box-shadow: 0 0 3px #0099cc; }
+  .myForm input[type="file"] {
+    font-size: 1rem;
+    border: 1px solid #c0c0c0;
+    width: 20rem;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; }
+    .myForm input[type="file"].myFormInputFile {
+      position: absolute;
+      left: -2000px; }
+  .myForm .myFormInputFile {
+    display: inline-block;
+    overflow: hidden;
+    height: 2rem;
+    vertical-align: middle;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    transition: box-shadow 0.5s ease;
+    -moz-transition: box-shadow 0.5s ease;
+    -webkit-transition: box-shadow 0.5s ease; }
+    .myForm .myFormInputFile.block {
+      display: block;
+      width: fit-content;
+      width: -moz-fit-content;
+      width: -webkit-fit-content;
+      width: -ms-fit-content; }
+    .myForm .myFormInputFile button {
+      float: left;
+      height: 100%;
+      border-radius: 3px 0 0 3px;
+      -moz-border-radius: 3px 0 0 3px;
+      -webkit-border-radius: 3px 0 0 3px; }
+      .myForm .myFormInputFile button:active {
+        transform: none;
+        -moz-transform: none;
+        -webkit-transform: none; }
+    .myForm .myFormInputFile span {
+      float: left;
+      height: 100%;
+      padding: 0.4rem;
+      border: 1px solid #c0c0c0;
+      box-sizing: border-box;
+      cursor: pointer;
+      border-radius: 0 3px 3px 0;
+      -moz-border-radius: 0 3px 3px 0;
+      -webkit-border-radius: 0 3px 3px 0; }
+  .myForm input[type="submit"],
+  .myForm input[type="reset"],
+  .myForm input[type="button"],
+  .myForm button {
+    background-color: #555555;
+    color: #eeeeee;
+    padding: 0.4rem 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    transition: background-color 0.7s ease;
+    -moz-transition: background-color 0.7s ease;
+    -webkit-transition: background-color 0.7s ease; }
+    .myForm input[type="submit"]:hover,
+    .myForm input[type="reset"]:hover,
+    .myForm input[type="button"]:hover,
+    .myForm button:hover {
+      background-color: #333333; }
+    .myForm input[type="submit"]:active,
+    .myForm input[type="reset"]:active,
+    .myForm input[type="button"]:active,
+    .myForm button:active {
+      transform: translate(1px, 1px);
+      -moz-transform: translate(1px, 1px);
+      -webkit-transform: translate(1px, 1px); }
+  .myForm textarea {
+    resize: vertical;
+    width: 15rem;
+    min-height: 5rem;
+    max-height: 15rem;
+    padding: 0.3rem 0.4rem;
+    border: 1px solid #c0c0c0;
+    transition: box-shadow 0.5s ease;
+    -moz-transition: box-shadow 0.5s ease;
+    -webkit-transition: box-shadow 0.5s ease; }
+    .myForm textarea:focus {
+      box-shadow: 0 0 3px #0099cc;
+      -moz-box-shadow: 0 0 3px #0099cc;
+      -webkit-box-shadow: 0 0 3px #0099cc; }
+
+/*# sourceMappingURL=main.css.map */
