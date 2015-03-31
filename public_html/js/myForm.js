@@ -5,8 +5,6 @@ var myForm = function (form) {
 
     for (var i = 0; i < inputsFile.length; i++) {
 
-        debugger;
-
         inputsFile[i].addClass("myFormInputFile");
         inputsFile[i].parentNode.insertBefore(createMyFormInputFile(inputsFile[i]), inputsFile[i]);
     }
@@ -43,7 +41,7 @@ var createMyFormInputFile = function (input) {
 
     // associamo gli handler
     myFormInputFile.addEventListener("click", function (e) {
-        input.dispatchEvent("click");
+        input.dispatchEvent(new MouseEvent('click'));
     });
 
     return myFormInputFile;
