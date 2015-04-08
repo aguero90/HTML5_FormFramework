@@ -43,7 +43,12 @@ var createMyFormInputFile = function (input) {
 
     // associamo gli handler
     myFormInputFile.addEventListener("click", function (e) {
-        input.dispatchEvent("click");
+
+        alert("click");
+
+        debugger;
+
+        input.dispatchEvent(e);
     });
 
     return myFormInputFile;
