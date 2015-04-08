@@ -5,8 +5,6 @@ var myForm = function (form) {
 
     for (var i = 0; i < inputsFile.length; i++) {
 
-        debugger;
-
         inputsFile[i].addClass("myFormInputFile");
         inputsFile[i].parentNode.insertBefore(createMyFormInputFile(inputsFile[i]), inputsFile[i]);
     }
@@ -43,12 +41,27 @@ var createMyFormInputFile = function (input) {
 
     // associamo gli handler
     myFormInputFile.addEventListener("click", function (e) {
+        input.dispatchEvent(new MouseEvent('click'));
 
-        alert("click");
+        /*
+         * <L'istruzione che segue potrebbe creare un botto di esplosioni>
+         * <dato che si basa su un sacco di assunzioni:>
+         *
+         *      il fatto che al click sul file input viene aperta una nuova
+         *      finestra in primo piano che è "always on top" e di
+         *      conseguenza il codice JS si blocca. E quando torna il
+         *      controllo alla finestra principale, riparte il codice JS da
+         *      questa istruzione.
+         *
+         * altro problema da risolvere: usa l'effetto closure xD il che è un
+         * male in termini di prestazioni xD
+         * Prima di risolvere vediamo se, come e quando esplode xD
+         *
+         * <CON CHROME NON FUNZIONA BENE INFATTI xD>
+         *
+         */
 
-        debugger;
-
-        input.dispatchEvent(e);
+        input.value !== "" ? el.innerHTML = input.value : el.innerHTML = "Seleziona il file...";
     });
 
     return myFormInputFile;
