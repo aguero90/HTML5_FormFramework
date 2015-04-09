@@ -252,4 +252,30 @@ html {
   .myForm [type="checkbox"]:checked + label:after {
     opacity: 1; }
 
+/* SELECT
+============================================================================= */
+.myFormSelect {
+  position: relative;
+  padding: 0.3rem 0.4rem;
+  font-size: 1rem;
+  border: 1px solid #c0c0c0;
+  width: 15rem;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
+  .myFormSelect span {
+    display: block; }
+  .myFormSelect ul {
+    width: 100%;
+    position: absolute;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.2rem;
+    background-color: #555555;
+    color: #ffffff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; }
+    .myFormSelect ul li {
+      padding: 0.2rem 0.4rem; }
+
 /*# sourceMappingURL=main.css.map */
