@@ -268,14 +268,30 @@ html {
   .myFormSelect ul {
     width: 100%;
     position: absolute;
-    margin-top: 0.5rem;
-    padding: 0.3rem 0.2rem;
-    background-color: #555555;
-    color: #ffffff;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px; }
+    margin-top: 0.3rem;
+    margin-left: -0.45rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px; }
     .myFormSelect ul li {
-      padding: 0.2rem 0.4rem; }
+      padding: 0.25rem;
+      cursor: pointer; }
+      .myFormSelect ul li:hover {
+        background-color: #dddddd; }
+      .myFormSelect ul li::before {
+        content: "\2713";
+        /* il segno di spunta */
+        display: inline-block;
+        color: #555555;
+        font-size: 0.8rem;
+        opacity: 0;
+        margin-right: 0.3rem;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        -moz-transition: opacity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease; }
+      .myFormSelect ul li.selected::before {
+        opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */
