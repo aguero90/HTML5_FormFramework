@@ -16,8 +16,10 @@
 // PROBLEMI
 // ============================================================================
 
-Al click sul timePicker, questo scompare poichè il click avviene sul <div>
-delle ore o dei minuti. Questa cosa in teoria dovrebbe succedere anche al datePicker
+- Al click sul timePicker, questo scompare poichè il click avviene sul <div>
+  delle ore o dei minuti. Questa cosa in teoria dovrebbe succedere anche al datePicker
+
+- sistemare lo stile dei radio ( per via di chrome e explorer )... le check sono accettabili
 
 
 

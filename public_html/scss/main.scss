@@ -71,15 +71,9 @@ html{
     ==========================================================================*/
 
     input[type="file"]{
-        font-size: 1rem;
-        border: 1px solid #c0c0c0; // possibile variabile
-        width: 20rem;
-        @include borderRadius(3px);
-
-        &.myFormInputFile{
-            position: absolute;
-            left: -2000px;
-        }
+        position: absolute;
+        left: -2000px;
+        top: 0;
     }
 
     .myFormInputFile{
@@ -236,11 +230,13 @@ html{
             bottom: 0.3rem;
             left: -1.2rem;
             cursor: pointer;
-            @include transition(opacity .3s ease);
+            @include transform(scale(0, 0));
+            @include transition(all .3s ease);
         }
 
         &:checked + label:after{
             opacity: 1;
+            @include transform(scale(1, 1));
         }
     }
 
@@ -256,10 +252,12 @@ html{
             bottom: 0;
             left: -1.1rem;
             cursor: pointer;
-            @include transition(opacity .3s ease);
+            @include transform(scale(0, 0));
+            @include transition(all .3s ease);
         }
 
         &:checked + label:after{
+            @include transform(scale(1, 1));
             opacity: 1;
         }
     }
@@ -272,9 +270,14 @@ html{
 /* SELECT
 ============================================================================= */
 
+select{
+    position: absolute;
+    left: -2000px;
+    top: 0;
+}
+
 .myFormSelect{
     position: relative;
-    padding: 0.3rem 0.4rem;
     font-size: 1rem;
     border: 1px solid #c0c0c0; // possibile variabile
     width: 15rem;
@@ -282,15 +285,28 @@ html{
 
     span{
         display: block;
+        padding: 0.3rem 0.4rem;
+        cursor: pointer;
+
+        &::after{
+            content: "\025be";
+            float: right;
+            color: #555555;
+            @include transform(scale(1.5, 1.5));
+        }
     }
 
     ul{
         width: 100%;
         position: absolute;
-        margin-top: 0.3rem;
-        margin-left: -0.45rem;
+        margin-left: -0.05rem; /* per allinearlo bene con il div */
         border: 1px solid #c0c0c0;
+        background-color: #ffffff;
+        max-height: 0;
+        overflow-y: hidden;
+        opacity: 0;
         @include borderRadius(0 0 3px 3px);
+        @include transition(all .7s ease);
 
         li{
             padding: 0.25rem;
@@ -308,12 +324,23 @@ html{
                 opacity: 0;
                 margin-right: 0.3rem;
                 cursor: pointer;
-                @include transition(opacity .3s ease);
+                @include transform(scale(0, 0));
+                @include transition(all .5s ease);
             }
 
             &.selected::before{
                 opacity: 1;
+                @include transform(scale(1, 1));
             }
+        }
+    }
+
+    &.showOptions{
+
+        ul{
+            max-height: 13.5rem; /* 10 opzioni visibili */
+            opacity: 1;
+            overflow-y: scroll;
         }
     }
 }

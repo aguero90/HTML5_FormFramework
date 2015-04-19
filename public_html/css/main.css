@@ -99,15 +99,9 @@ html {
       -moz-box-shadow: 0 0 3px #0099cc;
       -webkit-box-shadow: 0 0 3px #0099cc; }
   .myForm input[type="file"] {
-    font-size: 1rem;
-    border: 1px solid #c0c0c0;
-    width: 20rem;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px; }
-    .myForm input[type="file"].myFormInputFile {
-      position: absolute;
-      left: -2000px; }
+    position: absolute;
+    left: -2000px;
+    top: 0; }
   .myForm .myFormInputFile {
     display: inline-block;
     overflow: hidden;
@@ -230,11 +224,17 @@ html {
     bottom: 0.3rem;
     left: -1.2rem;
     cursor: pointer;
-    transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -webkit-transition: opacity 0.3s ease; }
+    transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease; }
   .myForm [type="radio"]:checked + label:after {
-    opacity: 1; }
+    opacity: 1;
+    transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1); }
   .myForm [type="checkbox"] + label:after {
     content: "\2713";
     /* il segno di spunta */
@@ -246,17 +246,27 @@ html {
     bottom: 0;
     left: -1.1rem;
     cursor: pointer;
-    transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -webkit-transition: opacity 0.3s ease; }
+    transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease; }
   .myForm [type="checkbox"]:checked + label:after {
+    transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
     opacity: 1; }
 
 /* SELECT
 ============================================================================= */
+select {
+  position: absolute;
+  left: -2000px;
+  top: 0; }
+
 .myFormSelect {
   position: relative;
-  padding: 0.3rem 0.4rem;
   font-size: 1rem;
   border: 1px solid #c0c0c0;
   width: 15rem;
@@ -264,16 +274,32 @@ html {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px; }
   .myFormSelect span {
-    display: block; }
+    display: block;
+    padding: 0.3rem 0.4rem;
+    cursor: pointer; }
+    .myFormSelect span::after {
+      content: "\025be";
+      float: right;
+      color: #555555;
+      transform: scale(1.5, 1.5);
+      -moz-transform: scale(1.5, 1.5);
+      -webkit-transform: scale(1.5, 1.5); }
   .myFormSelect ul {
     width: 100%;
     position: absolute;
-    margin-top: 0.3rem;
-    margin-left: -0.45rem;
+    margin-left: -0.05rem;
+    /* per allinearlo bene con il div */
     border: 1px solid #c0c0c0;
+    background-color: #ffffff;
+    max-height: 0;
+    overflow-y: hidden;
+    opacity: 0;
     border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
-    -webkit-border-radius: 0 0 3px 3px; }
+    -webkit-border-radius: 0 0 3px 3px;
+    transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease; }
     .myFormSelect ul li {
       padding: 0.25rem;
       cursor: pointer; }
@@ -288,10 +314,21 @@ html {
         opacity: 0;
         margin-right: 0.3rem;
         cursor: pointer;
-        transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -webkit-transition: opacity 0.3s ease; }
+        transform: scale(0, 0);
+        -moz-transform: scale(0, 0);
+        -webkit-transform: scale(0, 0);
+        transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease; }
       .myFormSelect ul li.selected::before {
-        opacity: 1; }
+        opacity: 1;
+        transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1); }
+  .myFormSelect.showOptions ul {
+    max-height: 13.5rem;
+    /* 10 opzioni visibili */
+    opacity: 1;
+    overflow-y: scroll; }
 
 /*# sourceMappingURL=main.css.map */
